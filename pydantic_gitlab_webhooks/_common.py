@@ -199,7 +199,7 @@ class Pipeline(BaseModel, _IdentifiableMixin):
     # See "hook_attrs()" in
     # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/data_builder/pipeline.rb
     iid: int
-    name: str
+    name: Optional[str] = None
     ref: str
     tag: bool
     sha: str
