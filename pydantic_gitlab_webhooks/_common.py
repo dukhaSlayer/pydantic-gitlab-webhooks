@@ -208,8 +208,8 @@ class Pipeline(BaseModel, _IdentifiableMixin):
     status: str
     stages: list[str]
     created_at: Datetime
-    finished_at: Datetime
-    duration: int
+    finished_at: Optional[Datetime] = None
+    duration: Optional[int] = None
     variables: list[PipelineVariable]
     url: AnyHttpUrl
 
